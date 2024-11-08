@@ -1,22 +1,33 @@
 name: Publish
-on: push
+on:
+  push:
+    branches:
+      - main  # Specify the branch to trigger the release
+
 jobs:
   release:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          # Specify your npm registry to avoid organization default
           registry-url: 'https://registry.npmjs.org'
+      
       - run: npm ci
+
       - run: npm run build
+      
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        # Ensure npm is configured to use your profile's scope
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-        # npx semantic-release
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        # npx semantic-release  # Ensure this is installed in your project
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
