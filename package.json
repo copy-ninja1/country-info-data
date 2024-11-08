@@ -1,6 +1,6 @@
 {
   "name": "world-data",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "",
   "type": "module",
   "main": "./dist/index.cjs",

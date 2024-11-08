@@ -19,4 +19,4 @@ jobs:
         # Ensure npm is configured to use your profile's scope
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          npx semantic-release
+        # npx semantic-release
