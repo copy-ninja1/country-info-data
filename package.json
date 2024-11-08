@@ -20,7 +20,7 @@
     }
   },
   "scripts": {
-    "test": "echo \"No test specified\"",
+    "test": "echo  \"No test specified\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test",
     "build": "tsup",
