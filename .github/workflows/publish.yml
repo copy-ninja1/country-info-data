@@ -8,10 +8,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+          # Specify your npm registry to avoid organization default
+          registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        # Ensure npm is configured to use your profile's scope
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npx semantic-release
