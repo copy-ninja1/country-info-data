@@ -1,6 +1,6 @@
 {
   "name": "country-info-data",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -35,16 +35,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/copy-ninja1/world-data.git"
+    "url": "git+https://github.com/copy-ninja1/country-info-data.git"
   },
   "publishConfig": {
     "@copy-ninja1:registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/copy-ninja1/world-data#readme",
+  "homepage": "https://github.com/copy-ninja1/country-info-data#readme",
   "author": "Emmanuel Uchewa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/copy-ninja1/world-data/issues"
+    "url": "https://github.com/copy-ninja1/country-info-data/issues"
   },
   "files": [
     "dist",
@@ -57,6 +57,7 @@
     "awesome-project",
     "country",
     "continent",
-    "countryCode"
+    "countryCode",
+    "country-info"
   ]
 }

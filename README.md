@@ -12,13 +12,13 @@ This library helps in managing and retrieving continent and country information.
 ## Installation
 
 ```js
-npm install world-data
+npm i country-info-data
 ```
 
 ## Usage
 
 ```ts
-import { CountryContinent } from "world-data";
+import { CountryContinent } from "country-info-data";
 
 const continents = CountryContinent.getContinents();
 console.log("Continents:", continents);
