@@ -1,4 +1,4 @@
-# World Data
+# country-info-data
 
 This library helps in managing and retrieving continent and country information. This library provides methods to fetch details about continents, find countries by continent, and get detailed information for specific countries.
 
@@ -18,18 +18,18 @@ npm i country-info-data
 ## Usage
 
 ```ts
-import { CountryContinent } from "country-info-data";
+import CountryData  from "country-info-data";
 
-const continents = CountryContinent.getContinents();
+const continents = CountryData.getContinents();
 console.log("Continents:", continents);
 
-const europeanCountries = CountryContinent.getCountriesByContinent("EU");
+const europeanCountries = CountryData.getCountriesByContinent("EU");
 console.log("Countries in Europe:", europeanCountries);
 
-const continentForUS = CountryContinent.getContinentByCountry("US");
+const continentForUS = CountryData.getContinentByCountry("US");
 console.log("Continent for US:", continentForUS);
 
-const japanDetails = CountryContinent.getCountryDetails("JP");
+const japanDetails = CountryData.getCountryDetails("JP");
 console.log("Details for Japan:", japanDetails);
 ```
 

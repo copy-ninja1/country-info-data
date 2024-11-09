@@ -4,7 +4,7 @@ type CountryCode = string;
 interface CountryDetails {
   name: string;
   code: CountryCode;
-  continent: ContinentCode;
+  continent?: ContinentCode;
 }
 
 export type { ContinentCode, CountryCode, CountryDetails };

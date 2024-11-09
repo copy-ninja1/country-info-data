@@ -5,9 +5,9 @@ export default defineConfig({
   format: ["esm", "cjs"],
   splitting: true,
   sourcemap: true,
-  minify: false,
+  minify: true,
   clean: true,
   skipNodeModulesBundle: true,
   dts: true,
-  external: ["node_modules"],
+  external: ["node_modules", "example"],
 });

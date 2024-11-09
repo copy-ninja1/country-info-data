@@ -7,7 +7,7 @@ import countriesInNorthAmerica from "./north_america";
 import countriesInOceeania from "./oceania";
 import countriesInSouthAmeria from "./south_america";
 
-const countryData: Record<ContinentCode, Record<CountryCode, string>> = {
+const allCountry: Record<ContinentCode, Record<CountryCode, string>> = {
   AF: countriesInAfrica,
   AN: countriesInAntarctica,
   AS: countriesInAsia,
@@ -17,4 +17,4 @@ const countryData: Record<ContinentCode, Record<CountryCode, string>> = {
   SA: countriesInSouthAmeria,
 };
 
-export default countryData;
+export default allCountry;
