@@ -1,5 +1,5 @@
 {
-  "name": "world-data",
+  "name": "country-info-data",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -38,7 +38,7 @@
     "url": "git+https://github.com/copy-ninja1/world-data.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@copy-ninja1:registry": "https://npm.pkg.github.com"
   },
   "homepage": "https://github.com/copy-ninja1/world-data#readme",
   "author": "Emmanuel Uchewa",
