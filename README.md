@@ -23,10 +23,20 @@ CountryData offers a comprehensive and flexible set of methods for working with 
 - Chain methods for building complex queries.
 
 ## Examples
-```typescript 
-  import CountryData  from "country-info-data";
+
+```typescript
+import CountryData from "country-info-data";
 ```
-1. **`query()`**
+
+1. **`findCountryDetailsByLocation`**
+
+- This method allows you to retrieve information about countries based on a given location . The location can be a continent name, region name, country name, or country code.
+
+```typescript
+CountryInfoData.findCountryDetailsByLocation(location: string): CountryDetails[]
+```
+
+2. **`query()`**
 
    - Starts a new country info query.
    - Returns a new `CountryInfoQuery` instance.
@@ -35,7 +45,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
      const query = CountryData.query();
      ```
 
-2. **`updateCountryData(countries: CountryDetails[])`**
+3. **`updateCountryData(countries: CountryDetails[])`**
 
    - Updates country data with new country details.
    - Example:
@@ -50,7 +60,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
      ]);
      ```
 
-3. **`getCountryNameByCode(countryCode: CountryCode)`**
+4. **`getCountryNameByCode(countryCode: CountryCode)`**
 
    - Retrieves the country name by its country code.
    - Returns the country name or `undefined` if not found.
@@ -60,7 +70,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
      console.log(countryName); // "United States"
      ```
 
-4. **`getCountryCodeByName(name: string)`**
+5. **`getCountryCodeByName(name: string)`**
 
    - Retrieves the country code by its country name.
    - Returns the country code or `undefined` if not found.
@@ -70,7 +80,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
      console.log(countryCode); // "US"
      ```
 
-5. **`getAllCountryNames()`**
+6. **`getAllCountryNames()`**
 
    - Retrieves a list of all country names.
    - Example:
@@ -79,7 +89,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
      console.log(countryNames); // ["United States", "Canada", "Mexico", ...]
      ```
 
-6. **`getAllCountryCodes()`**
+7. **`getAllCountryCodes()`**
 
    - Retrieves a list of all country codes.
    - Example:
@@ -121,8 +131,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
     - Retrieves a list of country codes for a given continent code.
     - Example:
       ```typescript
-      const countryCodesInAfrica =
-        CountryData.getCountryCodesByContinent("AF");
+      const countryCodesInAfrica = CountryData.getCountryCodesByContinent("AF");
       console.log(countryCodesInAfrica); // ["DZ", "EG", "MA", ...]
       ```
 
@@ -188,11 +197,10 @@ CountryData offers a comprehensive and flexible set of methods for working with 
     - Retrieves a list of country codes from multiple continents or regions.
     - Example:
       ```typescript
-      const countries =
-        CountryData.getCountriesFromMultipleContinentsOrRegions(
-          ["AF", "AS"],
-          ["WesternAfrica", "EastAsia"]
-        );
+      const countries = CountryData.getCountriesFromMultipleContinentsOrRegions(
+        ["AF", "AS"],
+        ["WesternAfrica", "EastAsia"]
+      );
       console.log(countries); // ["NG", "CN", "IN", ...]
       ```
 
@@ -220,7 +228,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
     - Example:
       ```typescript
       const regionByCountryName = CountryData.getRegionByCountryName("Kenya");
-      console.log(regionByCountryName); 
+      console.log(regionByCountryName);
       // Should print the region code corresponding to Kenya, e.g., 'EasternAfrica'
       ```
 
@@ -242,65 +250,79 @@ CountryData offers a comprehensive and flexible set of methods for working with 
       ```typescript
       const countryCodesByRegion =
         CountryData.getCountryCodesByRegion("SouthernAfrica");
-      console.log(countryCodesByRegion); 
+      console.log(countryCodesByRegion);
       // Should print an array of country codes in Southern Africa
       ```
 
 ### Query Builder Methods
 
 - **`continent(continentCodes: ContinentCode[])`**
+
   - Filters countries by the specified continent codes.
   - Returns the current query instance for method chaining.
 
 - **`region(regionOrRegions: RegionCode | RegionCode[])`**
+
   - Filters countries by the specified region or regions.
   - Returns the current query instance for method chaining.
 
 - **`country(countryCodes: string[])`**
+
   - Filters countries by the specified country codes.
   - Returns the current query instance for method chaining.
 
 - **`excludeContinent(continentCodes: ContinentCode[])`**
+
   - Excludes countries from the result based on the specified continent codes.
   - Returns the current query instance for method chaining.
 
 - **`excludeRegion(regionCodes: RegionCode[])`**
+
   - Excludes countries from the result based on the specified region codes.
   - Returns the current query instance for method chaining.
 
 - **`countryName(name: string)`**
+
   - Filters countries by the specified country name (partial match).
   - Returns the current query instance for method chaining.
 
 - **`excludeCountryCode(countryCodes: string[])`**
+
   - Excludes countries from the result based on the specified country codes.
   - Returns the current query instance for method chaining.
 
 - **`excludeCountryName(countryNames: string[])`**
+
   - Excludes countries from the result based on the specified country names.
   - Returns the current query instance for method chaining.
 
 - **`sortByName()`**
+
   - Sorts the results by country name.
   - Returns the current query instance for method chaining.
 
 - **`sortByContinent()`**
+
   - Sorts the results by continent name.
   - Returns the current query instance for method chaining.
 
 - **`sortByRegion()`**
+
   - Sorts the results by region name.
   - Returns the current query instance for method chaining.
 
 - **`limit(limit: number)`**
+
   - Limits the number of results returned.
   - Returns the current query instance for method chaining.
 
 - **`selectFields(fields: Array<keyof CountryDetails>)`**
+
   - Selects specific fields from the result set to include in the response.
   - Returns the current query instance for method chaining.
 
 - **`withDetails()`**
+
   - Includes additional details such as continent and region for each country.
   - Returns the current query instance for method chaining.
 
@@ -311,7 +333,7 @@ CountryData offers a comprehensive and flexible set of methods for working with 
 ## Example Usage
 
 ```typescript
-  import {CountryInfoQuery}  from "country-info-data";
+import { CountryInfoQuery } from "country-info-data";
 
 // Create a new query instance
 const query = new CountryInfoQuery();
@@ -336,3 +358,7 @@ console.log(results);
 ### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+```
+
+```

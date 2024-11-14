@@ -436,5 +436,79 @@ export default class CountryInfoData {
     return region as RegionCode;
   }
 
-  // static getCountriesBy
+  /**
+   * Finds country details by location.
+   * @param location - The continent name, region name, country name, or country code to search for.
+   * @returns An array of country details including code, name, continent (name and code), and region code.
+   */
+  static findCountryDetailsByLocation(location: string): CountryDetails[] {
+    const continentCode = this.getContinentCodeByName(
+      location as ContinentName
+    );
+    if (continentCode) {
+      // If location matches a continent name, return countries in that continent.
+      return this.getCountryCodesByContinent(continentCode).map((code) => ({
+        code,
+        name: this.getCountryNameByCode(code) as string,
+        continent: {
+          name: this.continents[continentCode],
+          code: continentCode,
+        },
+        region: this.getRegionByCountryCode(code),
+      }));
+    }
+
+    const regionCode = location as RegionCode;
+    if (regionCode in this.regionCountries) {
+      // If location matches a region name, return countries in that region.
+      return this.getCountryCodesByRegion(regionCode).map((code) => ({
+        code,
+        name: this.getCountryNameByCode(code) as string,
+        continent: {
+          name: this.continents[this.getContinentCodeByCountryCode(code)],
+          code: this.getContinentCodeByCountryCode(code),
+        },
+        region: regionCode,
+      }));
+    }
+
+    const countryCode = location as CountryCode;
+    if (countryCode in this.countryNames) {
+      // If location matches a country code, return the specific country details.
+      return [
+        {
+          code: countryCode,
+          name: this.getCountryNameByCode(countryCode) as string,
+          continent: {
+            name: this.continents[
+              this.getContinentCodeByCountryCode(countryCode)
+            ],
+            code: this.getContinentCodeByCountryCode(countryCode),
+          },
+          region: this.getRegionByCountryCode(countryCode),
+        },
+      ];
+    }
+
+    const countryNameCode = this.getCountryCodeByName(location);
+    if (countryNameCode) {
+      // If location matches a country name, return the specific country details.
+      return [
+        {
+          code: countryNameCode,
+          name: location,
+          continent: {
+            name: this.continents[
+              this.getContinentCodeByCountryCode(countryNameCode)
+            ],
+            code: this.getContinentCodeByCountryCode(countryNameCode),
+          },
+          region: this.getRegionByCountryCode(countryNameCode),
+        },
+      ];
+    }
+
+    // If location doesn't match any known location type, return an empty array.
+    return [];
+  }
 }

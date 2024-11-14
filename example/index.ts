@@ -8,6 +8,9 @@ console.log(countryName); // "United State"
 const countryCode = CountryInfoData.getCountryCodeByName("Canada");
 console.log(countryCode); // 'CA'
 
+const locationDetails = CountryInfoData.findCountryDetailsByLocation("canada");
+console.log({ locationDetails });
+
 //  Get all country names
 const allCountryNames = CountryInfoData.getAllCountryNames();
 console.log(allCountryNames); // an array of all country names
