@@ -92,6 +92,7 @@ const config: Config = {
     // Replace with your project's social card
     navbar: {
       title: "Country-Info-Data",
+      // style: "dark",
       items: [
         {
           type: "docSidebar",
