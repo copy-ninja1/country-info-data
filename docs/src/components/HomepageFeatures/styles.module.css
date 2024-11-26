@@ -7,16 +7,14 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
-
-  /* display: flex;
-  align-items: center;
+  display: flex;
+  justify-items: center;
   padding: 2rem 0;
-  width: 100%; */
-  /* height:100%; */
+  margin-top: 0.875rem;
 }
 
 .features::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +23,131 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
-.featureSvg {
-  height: 200px;
-  width: 200px;
+
+.heading {
+  font-size: 6rem;
+  color: #ff4000;
+  text-align: center;
+  background-image: linear-gradient(
+    45deg,
+    #ff4000 51%,
+    #ff5700 6%,
+    #ff6e00 67%,
+    #ff8500 53%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgb(203 213 225);
+  font-weight: bold;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  opacity: 0.6;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.button_89 {
+  --b: 3px;
+  --s: 0.45em;
+  --color: #ff4000;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_89:hover,
+.button_89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+  color: #ff8500;
+}
+
+.button_89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.featContainer {
+  padding-top: 70px;
+  padding-bottom: 24px;
+}
+
+.featContainer h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.featContainer p {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  opacity: 0.6;
+  color: rgb(203 213 225);
+  font-weight: bold;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.gridContainer {
+  padding-top: 50px;
+  padding-bottom: 24px;
+  margin: auto;
+}
+
+.featGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap:1rem;
+}
+
+.featGrid div {
+  color: #fff;
+}
+
+.featContent {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+  margin:.3rem;
+}
+
+
+
+/* @media screen and (max-width: 996px) {} */
