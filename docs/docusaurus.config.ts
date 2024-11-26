@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "country-info-data",
-  tagline: "manage and retrieve continent and country information",
+  title: "Country-Info-Data",
+  tagline: "Manage and retrieve continent and country information",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -40,20 +40,6 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/copy-ninja1/country-info-data",
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/copy-ninja1/country-info-data",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -113,18 +99,8 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Api",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Community",
-        },
+        { to: "api", label: "API", position: "left" },
+
         {
           href: "https://github.com/copy-ninja1/country-info-data",
           label: "GitHub",
