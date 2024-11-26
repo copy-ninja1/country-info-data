@@ -130,9 +130,9 @@
 
 .featGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .featGrid div {
@@ -145,9 +145,26 @@
   align-items: center;
   justify-items: center;
   gap: 0.5rem;
-  margin:.3rem;
+  margin: 0.3rem;
+  font-size: medium;
 }
 
-
-
-/* @media screen and (max-width: 996px) {} */
+@media screen and (max-width: 996px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .featContainer h2 {
+    font-size: 1.25rem;
+    text-align: justify;
+  }
+  .featContainer p {
+    font-size: 1.1rem;
+  }
+  .featGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
