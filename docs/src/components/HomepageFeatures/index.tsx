@@ -63,6 +63,17 @@ export default function HomepageFeatures(): JSX.Element {
               ))}
             </div>
           </div>
+
+          <div className={styles.customFooter}>
+            <div>
+              <a href="/docs/intro">Docs</a>
+              <a href="https://github.com/copy-ninja1/country-info-data">GitHub</a>
+            </div>
+
+            <div>
+              <p> Copyright © {new Date().getFullYear()} Country-Info-Data. Built with Docusaurus.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

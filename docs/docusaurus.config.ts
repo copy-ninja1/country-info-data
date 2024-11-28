@@ -50,6 +50,11 @@ const config: Config = {
 
   themeConfig: {
     // site meta data
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     metadata: [
       {
         name: "keywords",
@@ -92,7 +97,6 @@ const config: Config = {
     // Replace with your project's social card
     navbar: {
       title: "Country-Info-Data",
-      // style: "dark",
       items: [
         {
           type: "docSidebar",
@@ -108,42 +112,6 @@ const config: Config = {
           position: "right",
         },
       ],
-    },
-    footer: {
-      style: "light",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Introduction",
-              to: "/docs/intro",
-            },
-            {
-              label: "Getting Started",
-              to: "/docs/category/-getting-started",
-            },
-            {
-              label: "Examples",
-              to: "/docs/example",
-            },
-            {
-              label: "Community",
-              to: "/docs/category/-community",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/copy-ninja1/country-info-data",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Country-Info-Data. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
