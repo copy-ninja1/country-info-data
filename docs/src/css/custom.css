@@ -54,3 +54,13 @@
   background-color: rgba(31, 41, 55, 0.7);
   z-index: -1;
 }
+
+p{
+  font-size:1.2rem;
+}
+
+@media screen and (max-width: 996px) {
+  p{
+    font-size:1.1rem;
+  }
+}
