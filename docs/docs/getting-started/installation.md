@@ -7,8 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 👨‍💻 Installation
 
-Installing the **Country-Info-Data** library is quick and easy—just run a single command using your preferred package manager: [NPM](https://www.npmjs.com/) , [Yarn](https://yarnpkg.com/) , [Pnpm](https://pnpm.io/) or [Bun](https://bun.sh/).
-
+Installing the **Country-Info-Data** library is quick and easy—just run a single command using your preferred package manager: [Npm](https://www.npmjs.com/) , [Yarn](https://yarnpkg.com/) , [Pnpm](https://pnpm.io/) or [Bun](https://bun.sh/).
 
 <Tabs>
   <TabItem value="npm" label="npm" default>
@@ -36,12 +35,11 @@ Installing the **Country-Info-Data** library is quick and easy—just run a sing
   </TabItem>
 </Tabs>
 
-
 ### Requirements
 
 - [Node.js](https://nodejs.org/en/download/package-manager) version 18.0 or above (which can be checked by running `node -v` in your terminal). You can use [nvm](https://github.com/nvm-sh/nvm) to manage multiple Node versions on a single machine installed.
 
-- [NPM](https://www.npmjs.com/) , [Yarn](https://yarnpkg.com/) , [Pnpm](https://pnpm.io/) or [Bun](https://bun.sh/).
+- [Npm](https://www.npmjs.com/) , [Yarn](https://yarnpkg.com/) , [Pnpm](https://pnpm.io/) or [Bun](https://bun.sh/).
 
 - ES6+ environment
 
