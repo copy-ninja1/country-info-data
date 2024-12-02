@@ -354,4 +354,85 @@ console.log(countryCodesByRegion);
 ## Query Builder Methods
 
 
+:::info
 
+Unless otherwise specified, **all Query Builder Methods** return the current query instance, allowing for method chaining.
+
+:::
+
+
+
+### `continent(continentCodes: ContinentCode[])`
+
+This method filters countries by the specified **continent codes**.
+
+
+
+### `region(regionOrRegions: RegionCode | RegionCode[])`
+
+This method filters countries by the specified **region or regions**.
+
+
+### `country(countryCodes: string[])`
+
+Filters countries by the specified **country codes**.
+
+
+### `excludeContinent(continentCodes: ContinentCode[])`
+
+This method **excludes** countries from the result based on the specified **continent codes**.
+
+
+### `excludeRegion(regionCodes: RegionCode[])`
+
+This method **excludes** countries from the result based on the specified **region codes**.
+
+### `countryName(name: string)`
+
+Filters countries by the specified **country name (partial match)**..
+
+
+### `excludeCountryCode(countryCodes: string[])`
+
+**Excludes** countries from the result based on the specified **country codes**.
+
+
+### `excludeCountryName(countryNames: string[])`
+
+**Excludes** countries from the result based on the specified **country names**.
+
+
+### `sortByName()`
+
+This method **sorts** the results by **country name**.
+
+
+### `sortByContinent()`
+
+This method **sorts** the results by **continent name**.
+
+
+### `sortByRegion()`
+
+**Sorts** the results by **region name**.
+
+
+### `limit(limit: number)`
+
+This method **limits** the number of results returned.
+
+
+### `selectFields(fields: Array<keyof CountryDetails>)`
+
+This method **selects specific fields** from the result set to include in the response
+
+
+### `withDetails()`
+
+This method includes additional details such as continent and region for each country.
+
+
+### `execute()`
+
+This method executes the query and returns the filtered and sorted list of countries, either as country names or with full details based on the applied filters and configurations.
+It **returns a list of country names or full country details**.
