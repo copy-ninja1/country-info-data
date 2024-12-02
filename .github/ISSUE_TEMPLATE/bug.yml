@@ -12,7 +12,7 @@ body:
         - Do I have basic ideas about where it goes wrong? (For example, if there are stack traces, are they pointing to one file?)
         - Could it be because of my own mistakes?
 
-        **The GitHub issue tracker is not a support forum**. If you are not sure whether it could be your mistakes, ask in the  [GitHub discussions](https://github.com/copy-ninja1/country-info-data/) first. The quickest way to verify whether it's a Country-Info-Data defect is through a **reproduction**, starting with a fresh installation and making changes until the bug is reproduced.
+        **The GitHub issue tracker is not a support forum**. If you are not sure whether it could be your mistakes, ask in the  [GitHub discussions](https://github.com/copy-ninja1/country-info-data/discussions) first. The quickest way to verify whether it's a Country-Info-Data defect is through a **reproduction**, starting with a fresh installation and making changes until the bug is reproduced.
 
         Make the bug obvious. Ideally, we should be able to understand it without running any code.
 
