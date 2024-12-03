@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
+import Metrics from './metrics';
 
 type FeatureItem = {
   id: number;
@@ -46,6 +47,11 @@ export default function HomepageFeatures(): JSX.Element {
             <Link className={styles.button_89} to="/docs/intro">
               Read The Docs
             </Link>
+          </div>
+
+
+          <div>
+            <Metrics />
           </div>
 
           <div className={styles.featContainer}>
