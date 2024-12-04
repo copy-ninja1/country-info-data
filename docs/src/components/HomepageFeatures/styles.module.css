@@ -61,7 +61,7 @@
 .button_89 {
   --b: 3px;
   --s: 0.45em;
-  --color: #ff4000;
+  --color: #fff;
 
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
@@ -93,7 +93,7 @@
 }
 
 .button_89:active {
-  background: var(--color);
+  background: #ff8500;
   color: #ffffff;
 }
 
