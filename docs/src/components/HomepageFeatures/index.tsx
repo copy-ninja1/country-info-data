@@ -47,6 +47,10 @@ export default function HomepageFeatures(): JSX.Element {
             <Link className={styles.button_89} to="/docs/intro">
               Read The Docs
             </Link>
+
+            <Link className={styles.button_89} to="https://www.npmjs.com/package/country-info-data">
+              Explore NPM Docs
+            </Link>
           </div>
 
 
@@ -73,6 +77,7 @@ export default function HomepageFeatures(): JSX.Element {
           <div className={styles.customFooter}>
             <div>
               <a href="/docs/intro">Docs</a>
+              <a href="https://www.npmjs.com/package/country-info-data">Npm</a>
               <a href="https://github.com/copy-ninja1/country-info-data">GitHub</a>
             </div>
 
