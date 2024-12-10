@@ -1,0 +1,238 @@
+.features {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/img/bg-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 41, 55, 0.9);
+  z-index: -1;
+}
+
+.heading {
+  font-size: 6rem;
+  color: #ff4000;
+  text-align: center;
+  background-image: linear-gradient(
+    45deg,
+    #ff4000 51%,
+    #ff5700 6%,
+    #ff6e00 67%,
+    #ff8500 53%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgb(203, 213, 225);
+  font-weight: bold;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  gap:4rem;
+}
+
+.button_89 {
+  --b: 3px;
+  --s: 0.45em;
+  --color: #fff;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_89:hover,
+.button_89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+  color: #ff8500;
+}
+
+.button_89:active {
+  background: #ff8500;
+  color: #ffffff;
+}
+
+.featContainer {
+  padding-top: 70px;
+  padding-bottom: 24px;
+}
+
+.featContainer h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.featContainer p {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  opacity: 0.9;
+  color: rgb(203, 213, 225);
+  font-weight: bold;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.gridContainer {
+  padding-top: 50px;
+  padding-bottom: 24px;
+  margin: auto;
+}
+
+.featGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.featGrid div {
+  color: #fff;
+}
+
+.featContent {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+  margin: 0.3rem;
+  font-size: medium;
+}
+
+.featContent span {
+  color: rgb(203, 213, 225);
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customFooter {
+  margin-top: 20px;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(31, 41, 55, 0.5);
+}
+
+.customFooter div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.customFooter div a {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.metricContainer {
+  margin: 20px auto;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(31, 41, 55, 0.5);
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.metricFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.metricCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .featContainer h2 {
+    font-size: 1.25rem;
+    text-align: justify;
+  }
+  .featContainer p {
+    font-size: 1.1rem;
+  }
+  .featGrid {
+    display: flex;
+    flex-direction: column;
+  }
+  .metricFlex {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .metricCard {
+    justify-content: center;
+    padding: 1rem;
+  }
+}
